@@ -16,7 +16,7 @@ param resourceNameSuffix string = uniqueString(resourceGroup().id)
 var appServiceAppName = 'toy-website-${resourceNameSuffix}'
 var appServicePlanName = 'toy-website'
 var applicationInsightsName = 'toywebsite'
-var storageAccountName = 'toywebsitestorage'
+var storageAccountName = 'toy${resourceNameSuffix}'
 
 // Define the SKUs for each component based on the environment type.
 var environmentConfigurationMap = {
