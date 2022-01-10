@@ -12,8 +12,6 @@ param environmentType string = 'Test'
 @maxLength(13)
 param resourceNameSuffix string = uniqueString(resourceGroup().id)
 
-param storageAccountNameParam string
-
 // Define the names for resources.
 var appServiceAppName = 'toy-website-${resourceNameSuffix}'
 var appServicePlanName = 'toy-website'
